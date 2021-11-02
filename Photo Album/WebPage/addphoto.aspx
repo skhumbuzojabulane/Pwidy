@@ -10,31 +10,6 @@
     <link href="../Content/add.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap"/>
 
-    
-    <style>
-        #load{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: 9999;
-            background: url("Load.gif") no-repeat center center rgba(225,225,225,225)
-        }
-    </style>
-    <script>
-        document.onreadystatechange = function () {
-            var state = document.readyState
-            if (state == 'interactive') {
-                document.getElementById("contents").style.visibility = "hidden";
-            } else if (state == 'complete') {
-                setTimeout(function () {
-                    document.getElementById('interactive');
-                    document.getElementById('load').style.visibility = "hidden";
-                    document.getElementById('contents').style.visibility = "visible";
-                }, 2000);
-            }
-        }
-    </script>
-
     <style type="text/css">
         .auto-style1 {
             position: fixed;
@@ -52,9 +27,6 @@
         <div id="load"></div>
         <div class="wrapper fadeInDown">
             <div id="formContent">
-                <div class="fadeIn first">
-                    <img src="../Images/SiteMenu/photo.png" alt="Add Photo" />
-                </div>
                 <div>
                     <asp:FileUpload ID="FileUpload1" runat="server" BorderColor="#66CCFF" BorderStyle="Ridge" />
                     <br />
